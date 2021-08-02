@@ -1,4 +1,4 @@
-# Proyecto 3 - 
+# Proyecto 3 - Base de Datos Multimedia
 
 ## Datos generales
 - `Curso:` Base de Datos III - cs2702.
