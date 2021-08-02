@@ -1,0 +1,5 @@
+#!/bin/bash
+mkdir data
+curl http://vis-www.cs.umass.edu/lfw/lfw-a.zip --output data/named_a.zip
+unzip data/named_a.zip -d data/
+rm data/named_a.zip
