@@ -1,5 +1,5 @@
 import os
-import numpy as np
+import pickle
 import face_recognition
 
 PATH = './lfw'
@@ -11,10 +11,13 @@ for dirpath, dirnames, filenames in os.walk(PATH):
             image = face_recognition.load_image_file(PATH + '/' + dirname + '/' + file)
             features_vector = face_recognition.api.face_encodings(image)
 
-            person = [dirname]
-            person.append(features_vector[0].tolist())
-            dataset.append(person)
-            
+            if (len(features_vector) > 0):
+                person = [dirname]
+                person.append(features_vector[0].tolist())
+                dataset.append(person)
+                
+                print ([dirname])
 
-            print (person)
+with open('features_vectors', 'wb') as file:
+    pickle.dump(dataset, file)
                 
