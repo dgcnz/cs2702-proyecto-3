@@ -21,6 +21,7 @@ El logro del estudiante está enfocado a entender y aplicar los algoritmos de b�
 
 ### Algoritmo de búsqueda por Rango
 
-### Análisis y discusión de la experimentación. o Incluir imágenes/diagramas de apoyo
+### Análisis y discusión de la experimentación.
+> `Incluir imágenes/diagramas de apoyo.`
 
 ### Video de presentación
