@@ -48,3 +48,8 @@ class RTree:
         if strict:
             return ans[:k]
         return ans
+
+    def get(self, ix: int) -> str:
+        with open('answers.txt', 'r') as f:
+            paths = str(f.read()).splitlines()
+            return paths[ix]
