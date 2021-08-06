@@ -4,6 +4,7 @@ How to use RTree:
 
 ```python
 from lib.rtree import RTree
+import face_recognition
 
 D = 128
 rtree = RTree(D)
