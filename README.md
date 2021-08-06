@@ -30,6 +30,7 @@ El logro del estudiante está enfocado a entender y aplicar los algoritmos de b�
 
 ### Análisis y discusión de la experimentación.
 ![Benchmarks](https://github.com/dgcnz/cs2702-proyecto-3/blob/master/images/tests.png?raw=true)
+Comparación de tiempo de la búsqueda KNN en el RTree y de manera secuencial (tiempo en segundos)
 |           | KNN - RTree | KNN - Secuencial |
 |-----------|-------------|------------------|
 | N = 100   |    0.0002   |      0.0003      |
