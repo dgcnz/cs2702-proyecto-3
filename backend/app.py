@@ -25,7 +25,10 @@ def search_manager(search_type, image_name, k):
    features_vector = face_recognition.api.face_encodings(image)[0]
 
    answer_paths = []
-   indices = rtree.knn(features_vector, k)
+   if search_type == "knn":
+      indices = rtree.knn(features_vector, k)
+   elif search_type == "range":
+      indices = rtree.contained(features_vector, k)
    for i in indices:
       answer_paths.append(rtree.get(i))
    return answer_paths

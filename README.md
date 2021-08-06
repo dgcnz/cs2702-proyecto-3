@@ -54,7 +54,8 @@ rtree.contained(center: Point, r: float) -> List[int]:
 ```
 
 ### Análisis y discusión de la experimentación.
-
+![Benchmarks](https://github.com/dgcnz/cs2702-proyecto-3/blob/master/images/tests.png?raw=true)
+Comparación de tiempo(segundos) de la búsqueda KNN en el RTree y de manera secuencial usando un _k = 8_ en todos los tests. Para medir el tiempo de ejecución de cada búsqueda utilizamos la libreria [pytest-becnchmark](https://pypi.org/project/pytest-benchmark/)
 |           | KNN - RTree | KNN - Secuencial |
 |-----------|-------------|------------------|
 | N = 100   |    0.0002   |      0.0003      |
