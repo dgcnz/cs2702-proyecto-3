@@ -24,7 +24,11 @@ El logro del estudiante está enfocado a entender y aplicar los algoritmos de b�
 
 ### Construcción del índice RTree
 
+Se genera un vector caracteristico de todas las imagenes del dataset Labeled Faces in the Wild (LFW), usando [face_recognition](https://face-recognition.readthedocs.io/en/latest/readme.html) de Python. Este modelo tiene 99.38% de accuracy en el mismo benchmark dataset.
+
 Se hizo un wrapper de la libreria [rtree](https://rtree.readthedocs.io/en/latest/) en Python para la construccion del indice espacial. 
+
+Todos los vectores caracteristicos generados anteriormente se insertan en nuestro rtree como puntos junto a un identificador unico para poder recuperar la imagen original.
 
 ### Algoritmo de búsqueda KNN
 
