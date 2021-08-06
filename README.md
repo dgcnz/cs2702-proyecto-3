@@ -29,7 +29,7 @@ El logro del estudiante está enfocado a entender y aplicar los algoritmos de b�
 ### Algoritmo de búsqueda por Rango
 
 ### Análisis y discusión de la experimentación.
-> `Incluir imágenes/diagramas de apoyo.`
+
 |           | KNN - RTree | KNN - Secuencial |
 |-----------|-------------|------------------|
 | N = 100   |    0.0002   |      0.0003      |
