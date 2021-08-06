@@ -19,7 +19,7 @@ app.secret_key = b'dbii/'
 
 
 def search_manager(search_type, image_name, k):
-   rtree = RTree(128)
+   rtree = RTree(128, True)
    image_path = 'data/input/' + image_name
    image = face_recognition.load_image_file(image_path)
    features_vector = face_recognition.api.face_encodings(image)[0]
@@ -68,13 +68,19 @@ def find():
    time_start = time.time()
    list_of_images = search_manager(type_of_search,filename,k)
    time_end = time.time()
-   flash(u'Se encontraron ' + str(len(list_of_images)) + ' imagenes en ' + str(time_end - time_start) + ' segundos utilizandos.',  'alert-success')
+   flash(u'Se encontraron ' + str(len(list_of_images)) + ' imagenes en ' + str(time_end - time_start) + ' segundos.',  'alert-success')
 
-   # images_output = list()
-   # for image_name in list_of_images:
-   #    images_output.append('data/output/' + image_name)
+   #images_output = list()
+   #for image_name in list_of_images:
+      #images_output.append('lib/' + image_name)
       
    return render_template('finder.html', images_output=list_of_images)
    
+
+@app.route('/<path:foldername>/<path:filename>')
+def base_static(foldername, filename):
+   print(foldername+'/'+filename)
+   return send_from_directory('', foldername + '/' + filename)
+
 if __name__ == '__main__':
    app.run()

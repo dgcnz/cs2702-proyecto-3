@@ -50,11 +50,15 @@
         </form>
       </body>
 
+    <div class="button">
+      <h4>Resultados</h4>
+    </div>
+
     {% if images_output %}
     <div class="container mt-4">
-        <section id="pics">
+        <section id="pictures">
         {% for image in images_output %}
-            <div><img src="{{image}}" width="240"></div>
+            <div class="button"><img src="{{image}}" width="250"></div>
         {% endfor %}
         </section>
     </div>    

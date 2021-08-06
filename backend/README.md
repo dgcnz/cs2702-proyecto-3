@@ -7,7 +7,7 @@ from lib.rtree import RTree
 import face_recognition
 
 D = 128
-rtree = RTree(D)
+rtree = RTree(D, True)
 
 image_path = '...'
 image = face_recognition.load_image_file(image_path)
