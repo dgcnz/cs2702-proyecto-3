@@ -15,6 +15,13 @@ Este proyecto está enfocado a la construcción óptima de una estructura multid
 ### Objetivo del Proyecto
 El logro del estudiante está enfocado a entender y aplicar los algoritmos de búsqueda y recuperación de la información basado en el contenido.
 
+### Frontend
+
+![Index](https://github.com/dgcnz/cs2702-proyecto-3/blob/master/images/index.png?raw=true)
+![Index With Message](https://github.com/dgcnz/cs2702-proyecto-3/blob/master/images/index-with-messsage.png?raw=true)
+![Galery](https://github.com/dgcnz/cs2702-proyecto-3/blob/master/images/galery.png?raw=true)
+
+
 ### Construcción del índice RTree
 
 ### Algoritmo de búsqueda KNN
@@ -22,7 +29,7 @@ El logro del estudiante está enfocado a entender y aplicar los algoritmos de b�
 ### Algoritmo de búsqueda por Rango
 
 ### Análisis y discusión de la experimentación.
-> `Incluir imágenes/diagramas de apoyo.`
+![Benchmarks](https://github.com/dgcnz/cs2702-proyecto-3/blob/master/images/tests.png?raw=true)
 |           | KNN - RTree | KNN - Secuencial |
 |-----------|-------------|------------------|
 | N = 100   |    0.0002   |      0.0003      |
