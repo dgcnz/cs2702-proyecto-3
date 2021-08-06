@@ -29,8 +29,27 @@ def rtree_knn(N: int):
     rtree.knn(c, K, False)
 
 
-def test_benchmark10(benchmark):
-    benchmark(rtree_knn, 10)
-
 def test_benchmark100(benchmark):
     benchmark(rtree_knn, 100)
+
+def test_benchmark100(benchmark):
+    benchmark(rtree_knn, 200)
+
+def test_benchmark400(benchmark):
+    benchmark(rtree_knn, 400)
+
+def test_benchmark800(benchmark):
+    benchmark(rtree_knn, 800)
+
+def test_benchmark1600(benchmark):
+    benchmark(rtree_knn, 1600)
+
+def test_benchmark3200(benchmark):
+    benchmark(rtree_knn, 3200)
+
+def test_benchmark6400(benchmark):
+    benchmark(rtree_knn, 6400)
+
+def test_benchmark12800(benchmark):
+    benchmark(rtree_knn, 12800)
+
