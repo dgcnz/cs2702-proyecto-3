@@ -23,5 +23,15 @@ El logro del estudiante está enfocado a entender y aplicar los algoritmos de b�
 
 ### Análisis y discusión de la experimentación.
 > `Incluir imágenes/diagramas de apoyo.`
+|           | KNN - RTree | KNN - Secuencial |
+|-----------|-------------|------------------|
+| N = 100   |    0.0002   |      0.0003      |
+| N = 200   |    0.0003   |      0.0006      |
+| N = 400   |    0.0005   |      0.0011      |
+| N = 800   |    0.001    |      0.0023      |
+| N = 1600  |    0.0019   |      0.0045      |
+| N = 3200  |    0.0041   |      0.0023      |
+| N = 6400  |    0.0092   |      0.0184      |
+| N = 12800 |    0.0191   |      0.0378      |
 
 ### Video de presentación
