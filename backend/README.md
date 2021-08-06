@@ -11,7 +11,7 @@ rtree = RTree(D)
 
 image_path = '...'
 image = face_recognition.load_image_file(image_path)
-features_vector = face_recognition.api.face_encodings(image)
+features_vector = face_recognition.api.face_encodings(image)[0]
 
 answer_paths = []
 indices = rtree.knn(features_vector, k)
