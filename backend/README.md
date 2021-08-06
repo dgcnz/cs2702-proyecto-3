@@ -18,3 +18,12 @@ indices = rtree.knn(features_vector, k)
 for i in indices:
     answer_paths.append(rtree.get(i))
 ```
+
+
+Run benchmarks
+
+
+```python
+pip install pytest-benchmark
+python -m pytest tests/benchmarks.py
+```
