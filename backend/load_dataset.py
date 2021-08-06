@@ -6,7 +6,7 @@ from lib.rtree import RTree
 
 PATH = './lfw'
 
-people = []
+answers = []
 vectors = []
 for dirpath, dirnames, filenames in os.walk(PATH):
     for dirname in tqdm(dirnames):
@@ -22,5 +22,5 @@ assert (len(answers) == len(vectors))
 D = len(vectors[0])
 rtree = RTree(D, True)
 rtree.build(vectors)
-with open('answers.txt', 'w') as f:
+with open('answers.txt', 'w+') as f:
     f.write("\n".join(answers))
