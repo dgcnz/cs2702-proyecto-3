@@ -18,7 +18,7 @@ class RTree:
     dim: int
     idx: index.Index
 
-    def __init__(self, dim: int, disk=True):
+    def __init__(self, dim: int, disk=False):
         p = index.Property()
         p.dimension = dim
         self.dim = dim
