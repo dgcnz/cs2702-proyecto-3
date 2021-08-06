@@ -22,8 +22,11 @@ def search_manager(search_type, image_name, k):
    rtree = RTree(128, True)
    image_path = 'data/input/' + image_name
    image = face_recognition.load_image_file(image_path)
-   features_vector = face_recognition.api.face_encodings(image)[0]
 
+   try:
+      features_vector = face_recognition.api.face_encodings(image)[0]
+   except Exception:
+      return []
    answer_paths = []
    if search_type == "knn":
       indices = rtree.knn(features_vector, k)
@@ -71,7 +74,11 @@ def find():
    time_start = time.time()
    list_of_images = search_manager(type_of_search,filename,k)
    time_end = time.time()
-   flash(u'Se encontraron ' + str(len(list_of_images)) + ' imagenes en ' + str(time_end - time_start) + ' segundos.',  'alert-success')
+   
+   if len(list_of_images) == 0:
+      flash('Lo sentimos, no hemos identificado ninguna cara.',  'alert-warning')
+   else:
+      flash(u'Se encontraron ' + str(len(list_of_images)) + ' imagenes en ' + str(time_end - time_start) + ' segundos.',  'alert-success')
 
    #images_output = list()
    #for image_name in list_of_images:
