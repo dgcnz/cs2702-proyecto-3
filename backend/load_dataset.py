@@ -1,6 +1,4 @@
 import os
-
-print(os.getcwd())
 import pickle
 import face_recognition
 from tqdm import tqdm
@@ -13,16 +11,16 @@ vectors = []
 for dirpath, dirnames, filenames in os.walk(PATH):
     for dirname in tqdm(dirnames):
         for file in os.listdir(PATH + '/' + dirname):
-            image = face_recognition.load_image_file(PATH + '/' + dirname +
-                                                     '/' + file)
+            ipath = PATH + '/' + dirname + '/' + file
+            image = face_recognition.load_image_file(ipath)
             features_vector = face_recognition.api.face_encodings(image)
             if len(features_vector) > 0:
-                people.append(dirname)
+                answers.append(ipath)
                 vectors.append(features_vector[0].tolist())
 
-assert (len(people) == len(vectors))
+assert (len(answers) == len(vectors))
 D = len(vectors[0])
 rtree = RTree(D, True)
 rtree.build(vectors)
-with open('people.txt', 'w') as f:
-    f.write("\n".join(people))
+with open('answers.txt', 'w') as f:
+    f.write("\n".join(answers))
