@@ -24,9 +24,34 @@ El logro del estudiante está enfocado a entender y aplicar los algoritmos de b�
 
 ### Construcción del índice RTree
 
+Se hizo un wrapper de la libreria [rtree](https://rtree.readthedocs.io/en/latest/) en Python para la construccion del indice espacial. 
+
 ### Algoritmo de búsqueda KNN
 
+Returns a list of indices of the images.
+
+```python
+rtree.knn(p: Point, k: int) -> List[int]:
+    return list(self.idx.nearest(to_box(p), k))
+```
+
+
 ### Algoritmo de búsqueda por Rango
+
+En vez de hacer un circular query, esta se hace en dos fases:
+1. Query en un bounding box.
+2. Post-filtro para eliminar esquinas.
+
+![](images/circlesquare.png)
+
+```python
+rtree.contained(center: Point, r: float) -> List[int]:
+    box = [x - r for x in center] + [x + r for x in center]
+    return [
+        item.id for item in self.idx.intersection(box, objects=True)
+        if np.linalg.norm(to_point(item.bbox) - center) <= r
+    ]
+```
 
 ### Análisis y discusión de la experimentación.
 
