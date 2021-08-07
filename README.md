@@ -72,3 +72,4 @@ Comparación de tiempo(segundos) de la búsqueda KNN en el RTree y de manera sec
 | N = 12800 |    0.0191   |      0.0378      |
 
 ### Video de presentación
+[Link del video](https://drive.google.com/file/d/1qmoun59SG8nOIG3P3XqD1n4WnT2_ad-c/view?usp=sharing)
